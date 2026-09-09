@@ -1,86 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #1a1b2f;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Layout */
+main {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* About Section */
+#about {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Circular gradient fallback if no image is available */
+    background: linear-gradient(135deg, #42a5f5, #26a69a);
+}
+
+#about p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #444;
+}
+
+/* Projects Section */
+#projects h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.project-card {
+    background-color: #f0f3f9;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.project-banner {
+    width: 100%;
+    height: 70px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #7c93ed, #32d0b5);
+    margin-bottom: 0.75rem;
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+    color: #1a1b2f;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #f0f3f9;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+    </style>
 </head>
-
 <body>
-
-    <!-- Navigation -->
     <header>
-        <h2>Pragna</h2>
+                          
+        <div class="logo">Pragna</div>
 
         <nav>
-            <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact">Contacts</a>
+            
         </nav>
     </header>
+    <main>
+         <section id="about">           <!-- who you are -->
+          
 
-
-    <!-- Home -->
-    <section id="home">
-
-        <div class="intro">
-            <p>Hello, I'm</p>
-
-            <h1>Pragna</h1>
-
-            <h2>Student & Web Developer</h2>
-
-            <p>
-                I am learning web development and
-                interested in creating simple websites.
-            </p>
-
-            <button>Know More</button>
-        </div>
-
-        <div class="photo">
-            <img src="girl.jpg" alt="My Photo">
-        </div>
-
-    </section>
-
-
-    <!-- About -->
-    <section id="about">
-        <h1>About Me</h1>
-        <p>
-            I am a student who enjoys learning
-            technology and creating new things.
-        </p>
-    </section>
-
-
-    <!-- Skills -->
-    <section id="skills">
-        <h1>My Skills</h1>
-
-        <div class="skills">
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>Python</p>
-        </div>
-    </section>
-
-
-    <!-- Projects -->
-    <section id="projects">
-        <h1>My Projects</h1>
-        <p>Portfolio Website</p>
-        <p>Simple HTML Project</p>
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact">
-        <h1>Contact Me</h1>
-        <p>Email: yourmail@gmail.com</p>
-    </section>
-
+          <img src="img.jpeg" alt="my profile" style="width: 100px; height:100px; border-radius: 50%;">  
+          <p>First-year CS student who loves building for the web. I turn ideas into clean, responsive pages</p>
+        </section>
+        <section id="projects">        <!-- your work -->
+          <h2>Projects</h2>
+          <div class="project-card">
+             <div class ="project-banner">
+             </div>
+             <h3>weather app</h3>
+          </div>
+          <div class="project-card">
+             <div class ="project-banner">
+             </div>
+             <h3>quiz game</h3>
+          </div>
+          <div class="project-card">
+             <div class ="project-banner">
+             </div>
+             <h3>to do list</h3>
+          </div>
+          <div class="project-card">
+             <div class ="project-banner">
+             </div>
+             <h3>calculator</h3>
+          </div>
+          
+        </section>
+    </main>
+    <footer id="contact">          <!-- how to reach you -->
+     <p>Contact: <a href="mailto:karon@example.com">Pragna@example.com</a> · <a href="#">GitHub</a> · <a href="#">LinkedIn</a></p>
+    
+    </footer>
+    
 </body>
 </html>
